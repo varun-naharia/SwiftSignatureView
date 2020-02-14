@@ -21,14 +21,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-sign" translatesAutoresizingMaskIntoConstraints="NO" id="V4L-gZ-Rz7">
+                                <rect key="frame" x="20" y="273" width="374" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use your fingre to make a signature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzC-pk-UBp">
+                                <rect key="frame" x="20" y="323" width="374" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWx-Y3-ll7" customClass="SwiftSignatureView" customModule="SwiftSignatureView">
                                 <rect key="frame" x="20" y="273" width="374" height="150"/>
-                                <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="strokeAlpha">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumStrokeWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumStrokeWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -68,22 +83,30 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZJs-BI-m5T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fGw-KJ-Cpg" secondAttribute="trailing" constant="8" symbolic="YES" id="3Pb-VF-0Ra"/>
+                            <constraint firstItem="tzC-pk-UBp" firstAttribute="top" secondItem="V4L-gZ-Rz7" secondAttribute="top" constant="50" id="4X4-z5-X3i"/>
                             <constraint firstItem="WWx-Y3-ll7" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="6zr-eA-iD9"/>
                             <constraint firstItem="8Dn-5I-1wr" firstAttribute="trailing" secondItem="WWx-Y3-ll7" secondAttribute="trailing" id="7iI-nI-t8w"/>
                             <constraint firstItem="BxB-EY-lJP" firstAttribute="leading" secondItem="WWx-Y3-ll7" secondAttribute="leading" id="7wv-GI-Awh"/>
                             <constraint firstItem="WWx-Y3-ll7" firstAttribute="trailing" secondItem="35w-zR-awq" secondAttribute="trailing" id="DkG-IL-S7m"/>
+                            <constraint firstItem="V4L-gZ-Rz7" firstAttribute="leading" secondItem="WWx-Y3-ll7" secondAttribute="leading" id="IGQ-nc-mNj"/>
+                            <constraint firstItem="V4L-gZ-Rz7" firstAttribute="top" secondItem="WWx-Y3-ll7" secondAttribute="top" id="Ilz-mS-uy5"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="35w-zR-awq" secondAttribute="bottom" constant="245" id="Mmx-e3-IoL"/>
+                            <constraint firstItem="tzC-pk-UBp" firstAttribute="bottom" secondItem="V4L-gZ-Rz7" secondAttribute="bottom" id="OGO-Qg-xaT"/>
                             <constraint firstItem="35w-zR-awq" firstAttribute="top" secondItem="fGw-KJ-Cpg" secondAttribute="bottom" constant="8" symbolic="YES" id="Ov8-Q1-EqW"/>
                             <constraint firstAttribute="bottom" secondItem="WWx-Y3-ll7" secondAttribute="bottom" constant="473" id="Q6h-SI-tb5"/>
                             <constraint firstItem="ZJs-BI-m5T" firstAttribute="top" secondItem="fGw-KJ-Cpg" secondAttribute="top" id="SBb-ep-bnJ"/>
                             <constraint firstItem="WWx-Y3-ll7" firstAttribute="leading" secondItem="35w-zR-awq" secondAttribute="leading" id="SmG-VL-McM"/>
+                            <constraint firstItem="V4L-gZ-Rz7" firstAttribute="trailing" secondItem="WWx-Y3-ll7" secondAttribute="trailing" id="V7J-zJ-Cha"/>
                             <constraint firstItem="fGw-KJ-Cpg" firstAttribute="top" secondItem="WWx-Y3-ll7" secondAttribute="bottom" constant="15" id="VM9-Zi-u9q"/>
                             <constraint firstItem="WWx-Y3-ll7" firstAttribute="top" secondItem="8Dn-5I-1wr" secondAttribute="bottom" constant="11" id="Xch-tt-gIR"/>
+                            <constraint firstItem="V4L-gZ-Rz7" firstAttribute="bottom" secondItem="WWx-Y3-ll7" secondAttribute="bottom" id="Yoe-BC-dEd"/>
                             <constraint firstItem="8Dn-5I-1wr" firstAttribute="top" secondItem="BxB-EY-lJP" secondAttribute="top" id="cbg-Ow-iSz"/>
                             <constraint firstItem="WWx-Y3-ll7" firstAttribute="trailing" secondItem="ZJs-BI-m5T" secondAttribute="trailing" id="dEu-5X-pXM"/>
                             <constraint firstItem="8Dn-5I-1wr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BxB-EY-lJP" secondAttribute="trailing" constant="8" symbolic="YES" id="kdj-Rf-UFW"/>
+                            <constraint firstItem="tzC-pk-UBp" firstAttribute="trailing" secondItem="V4L-gZ-Rz7" secondAttribute="trailing" id="o1S-Wu-n84"/>
                             <constraint firstItem="WWx-Y3-ll7" firstAttribute="leading" secondItem="fGw-KJ-Cpg" secondAttribute="leading" id="qkK-8q-Xo9"/>
                             <constraint firstItem="WWx-Y3-ll7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="tc5-lz-KVq"/>
+                            <constraint firstItem="tzC-pk-UBp" firstAttribute="leading" secondItem="V4L-gZ-Rz7" secondAttribute="leading" id="uvr-Hy-Ka8"/>
                             <constraint firstItem="WWx-Y3-ll7" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="273" id="z0T-9q-ry2"/>
                         </constraints>
                     </view>
@@ -97,4 +120,7 @@
             <point key="canvasLocation" x="421.73913043478262" y="302.00892857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic-sign" width="45" height="33"/>
+    </resources>
 </document>

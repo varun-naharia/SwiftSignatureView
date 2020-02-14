@@ -24,6 +24,7 @@ public class ViewController: UIViewController, SwiftSignatureViewDelegate {
 
     @IBAction func didTapClear() {
         signatureView.clear()
+        signatureView.backgroundColor = .clear
     }
     
     @IBAction func didTapRefreshCroppedSignature() {
@@ -37,6 +38,10 @@ public class ViewController: UIViewController, SwiftSignatureViewDelegate {
 
     public func swiftSignatureViewDidPanInside(_ view: SwiftSignatureView, _ pan:UIPanGestureRecognizer) {
         // noop
+    }
+    
+    public func swiftSignatureViewDidStartSignature(_ view: SwiftSignatureView) {
+        signatureView.backgroundColor = .white
     }
 }
 

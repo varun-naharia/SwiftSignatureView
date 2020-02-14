@@ -10,6 +10,7 @@ import UIKit
 
 public protocol SwiftSignatureViewDelegate: class {
     func swiftSignatureViewDidTapInside(_ view: SwiftSignatureView)
+    func swiftSignatureViewDidStartSignature(_ view: SwiftSignatureView)
     func swiftSignatureViewDidPanInside(_ view: SwiftSignatureView, _ pan:UIPanGestureRecognizer)
 }
 
@@ -112,6 +113,25 @@ open class SwiftSignatureView: UIView {
         pan.minimumNumberOfTouches = 1
         pan.maximumNumberOfTouches = 1
         self.addGestureRecognizer(pan)
+        
+        let touchDown = UILongPressGestureRecognizer(target:self, action: #selector(didTouchDown))
+        touchDown.minimumPressDuration = 0
+        self.addGestureRecognizer(touchDown)
+    }
+    
+    @objc func didTouchDown(gesture: UILongPressGestureRecognizer) {
+        
+            let rect = self.bounds
+            UIGraphicsBeginImageContextWithOptions(rect.size, false, UIScreen.main.scale)
+            if(_signature == nil) {
+                _signature = UIGraphicsGetImageFromCurrentImageContext()
+            }
+            _signature?.draw(in: rect)
+            _signature = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            self.setNeedsDisplay()
+            self.delegate?.swiftSignatureViewDidStartSignature(self)
+        
     }
     
     @objc func tap(_ tap:UITapGestureRecognizer) {
